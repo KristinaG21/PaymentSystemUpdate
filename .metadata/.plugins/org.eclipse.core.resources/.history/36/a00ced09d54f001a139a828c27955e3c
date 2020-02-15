@@ -1,0 +1,34 @@
+package lv.kristina.test;
+
+import lv.kristina.employee.CommissiomEmployee;
+import lv.kristina.employee.SalaryEmployee;
+import lv.kristina.paysystem.PaymentSystem;
+
+public class TestPayment {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		PaymentSystem paymentSystem = new PaymentSystem();
+		
+		CommissiomEmployee toms = new CommissiomEmployee("Toms Ozolins", 1030492, 1200.50);
+        paymentSystem.addPayee(toms);
+		
+		CommissiomEmployee ieva = new CommissiomEmployee("Ieva Berzina", 1037858, 1300.50);
+		paymentSystem.addPayee(ieva);
+		
+		
+		SalaryEmployee kristina = new SalaryEmployee("Kristina Gejenko", 3562577, 1500.65);
+		paymentSystem.addPayee(kristina);
+		
+		SalaryEmployee anna = new SalaryEmployee("Anna Katina", 356675568, 1450.65);
+		paymentSystem.addPayee(anna);
+		
+		
+		
+		
+	}
+
+}

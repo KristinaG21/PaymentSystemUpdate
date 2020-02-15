@@ -1,0 +1,18 @@
+package lv.kristina.test;
+
+import lv.kristina.employee.CommissiomEmployee;
+import lv.kristina.paysystem.PaymentSystem;
+
+public class TestPayment {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		PaymentSystem paymentSystem = new PaymentSystem();
+		
+		CommissiomEmployee toms = new CommissiomEmployee("Toms Ozolins", 1030492, 300.50);
+
+	}
+
+}

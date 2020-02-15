@@ -1,0 +1,49 @@
+package lv.kristina.test;
+
+import java.util.Arrays;
+
+import lv.kristina.employee.CommissiomEmployee;
+import lv.kristina.employee.SalaryEmployee;
+import lv.kristina.paysystem.PaymentSystem;
+
+public class TestPayment {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		PaymentSystem paymentSystem = new PaymentSystem();
+		
+		CommissiomEmployee toms = new CommissiomEmployee("Toms Ozolins", 1030492, 1200.50);
+        paymentSystem.addPayee(toms);
+		
+		CommissiomEmployee ieva = new CommissiomEmployee("Ieva Berzina", 1037858, 1300.50);
+		paymentSystem.addPayee(ieva);
+		
+		
+		SalaryEmployee kristina = new SalaryEmployee("Kristina Gejenko", 3562577, 1500.65);
+		paymentSystem.addPayee(kristina);
+		kristina.giveBonus(20.0);
+		
+		SalaryEmployee anna = new SalaryEmployee("Anna Katina", 356675568, 1450.65);
+		paymentSystem.addPayee(anna);
+		anna.giveBonus(48.0);
+		
+		//simulate work
+		toms.giveComission(4.0);
+		toms.giveComission(60.0);
+		ieva.giveComission(245.0);
+		
+		paymentSystem.processPayments();
+		
+		Double d = 43.54646;
+		System.out.println(String.format("%1$, .2f", d));
+		
+		
+		
+		
+		
+	}
+
+}
